@@ -1,0 +1,225 @@
+* {
+  box-sizing: border-box;
+}
+//Stop default chrome overscroll behavior
+html {
+  height: 100%;
+  overflow: hidden;
+}
+body {
+  height: 100%;
+  overflow: auto;
+}
+
+// remove the webkit-focus-rings added in smooth scrolling
+#bio:focus {
+  outline: none;
+}
+
+#contact:focus {
+  outline: none;
+}
+
+/* Global Link Styles */
+a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Define Wrapper dimensions */
+.wrapper {
+  width: 1440px;
+  max-width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+// banner styles ************
+#banner {
+  position: relative;
+  background-image: url("../../imgs/banner.png");
+  height: 800px;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav ul {
+  padding: 0;
+}
+
+nav {
+  margin: 0 auto;
+  padding-top: 10px;
+  a {
+    font-family: 'Fira Sans', sans-serif;
+    position: relative; // for animating
+  }
+  a:hover {
+    color: white;
+  }
+  // nav link animation
+  a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.2s ease-in-out 0s;
+    transition: all 0.2s ease-in-out 0s;
+  }
+  a:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+  // for the dots between the links
+  span {
+    padding: 0 .5rem;
+  }
+}
+
+/* Color all text inside the spans white */
+span {
+  color: white;
+}
+
+.banner-content {
+  margin-top: 250px;
+}
+
+.banner-title {
+  display:inline-block;
+  font-family: 'EB Garamond', serif;
+  font-size: 50pt;
+  margin-bottom: 20px;
+}
+
+.banner-sub-title {
+  display: inline-block;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 14pt;
+  margin-bottom: 40px;
+  a {
+    border-bottom: 1px solid rgba(228,227,227,0.5);
+  }
+  a:hover {
+    border-bottom: 1px solid rgb(228,227,227);
+  }
+}
+
+.banner-button {
+  display: inline-block;
+  border: 1px solid white;
+  padding: 10px 40px;
+  border-radius: 2rem;
+  font-family: 'EB Garamond', serif;
+}
+.banner-button:hover {
+  color: #BDE1B9;
+  border: 1px solid #BDE1B9;
+}
+
+
+// Bio Styles **************
+
+#bio {
+  position: relative;
+  display: table-cell;
+  height: 922px;
+  background-image: url("../../imgs/bio_background.jpg");
+  .wrapper {
+    padding-top: 180px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12pt;
+  }
+  p {
+    color: #EFE7E7;
+    overflow: hidden;
+    width: 730px;
+    line-height: 1.5em;
+    text-align: left;
+    padding-left: 5em;
+  }
+  img {
+    position: relative;
+    top: 60px;
+  }
+}
+
+.bio-pic {
+  height: 345px;
+  width: auto;
+  float: left;
+}
+
+// contact sytles *************
+#contact {
+  position: relative;
+  height: 660px;
+  background-image: url("../../imgs/contact_background.jpg")
+}
+
+.contact-info-div {
+  padding-right: 500px;
+  padding-top: 125px;
+}
+
+.contact-title {
+  font-family: 'EB Garamond', serif;
+  font-size: 80px;
+}
+
+.contact-sub-title {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+}
+
+.contact-border-div {
+  margin: 0 auto;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  border: 1px solid #B9B3B3;
+  width: 300px;
+  padding: 30px 0;
+  margin-top: 30px;
+  a {
+    position: relative;
+  }
+  a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    transition: all 0.4s ease-in-out 0s;
+  }
+  a:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+}
+
+.copyright {
+  position: absolute;
+  bottom: 4px;
+  left: 45%;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  color: #E4E3E3;
+}
