@@ -7,7 +7,8 @@ html {
 
 body {
   height: 100%;
-  overflow: auto; }
+  overflow: auto;
+  table-layout: fixed; }
 
 #bio:focus {
   outline: none; }
@@ -30,7 +31,9 @@ a {
 #banner {
   position: relative;
   background-image: url("../../imgs/banner.png");
-  height: 800px; }
+  height: 800px;
+  background-repeat: no-repeat;
+  background-size: cover; }
 
 nav li {
   display: inline-block; }
@@ -103,9 +106,12 @@ span {
 
 #bio {
   position: relative;
-  display: table-cell;
+  display: block;
   height: 922px;
-  background-image: url("../../imgs/bio_background.jpg"); }
+  background-image: url("../../imgs/bio_background.jpg");
+  background-repeat: no-repeat;
+  max-width: 100%;
+  background-size: cover; }
   #bio .wrapper {
     padding-top: 180px;
     font-family: 'Open Sans', sans-serif;
@@ -129,7 +135,9 @@ span {
 #contact {
   position: relative;
   height: 660px;
-  background-image: url("../../imgs/contact_background.jpg"); }
+  background-image: url("../../imgs/contact_background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat; }
 
 .contact-info-div {
   padding-right: 500px;
